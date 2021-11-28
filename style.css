@@ -1,0 +1,127 @@
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --mainBGColor: hsl(217, 54%, 11%);
+    --cardBGColor: hsl(216, 50%, 16%);
+    --lineColor: hsl(215, 32%, 27%);
+}
+html {
+    height: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif, serif;
+    color: var(--softBlue);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--mainBGColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 14rem;
+    background-color: var(--cardBGColor);
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.imageContainer {
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 14rem;
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: 100%;
+}
+
+.preview {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.preview:hover {
+    opacity: 0.7;
+}
+
+.description, .time, .price {
+    font-size: 0.8rem;
+}
+.description {
+    margin-bottom: 0.5rem;
+}
+.priceAndTime {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--lineColor);
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+
+.price {
+    color: var(--Cyan);
+    
+}
+
+.price::before {
+    content: url(images/icon-ethereum.svg);
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+.time::before {
+    content: url(images/icon-clock.svg);
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+
+.owner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ownerImage {
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+.ownerName {
+    font-size: 0.8rem;
+}
+
+.ownerName span {
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+#title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+p {
+    margin: 0;
+}
+.ownerName span:hover, #title:hover {
+    color: var(--Cyan)
+}
